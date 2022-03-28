@@ -48,8 +48,9 @@ const Dropzone = () => {
     <button className="border rounded bg-blue-400 p-3 my-5 w-full" onClick={subirArchivos}>publicar</button>
     <p> Vista previa imagenes</p>
     {
-        SelectImage?.map(file => (
+        SelectImage?.map((file,i) => (
           <img
+            key={i}
             src={file.preview}
             alt="Picture of the author"
             width={200}

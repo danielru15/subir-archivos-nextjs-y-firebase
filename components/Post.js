@@ -33,8 +33,8 @@ const Post = () => {
         p-8 w-1/2 m-auto mb-4" key={publicacion.id}>
             <div className='text-lg'>{publicacion.descripcion}</div> 
             <div className='flex space-x-3'>
-                {publicacion.images?.map( file => (
-                    <div className='relative w-full h-96'>
+                {publicacion.images?.map( (file,i) => (
+                    <div className='relative w-full h-96' key={i}>
                         <Image
                             src={file}
                             layout='fill'
